@@ -1,0 +1,53 @@
+div.sign_header{
+    margin:20px 50px;
+    height: fit-content;
+    background-color: #005b96;
+}
+
+div.Sbox{
+    display: flex;
+    margin:50px;
+    justify-content: center;
+}
+
+div.Sbox>form{
+    border: black solid;
+    padding : 30px;
+    display : flex;
+    flex-direction: column;
+    font-family : Josefin Sans;
+    font-size: 20px;
+    width :400px;
+}
+
+form>div{
+    height: fit-content;
+    margin: 10px;
+}
+
+form>div>input{
+    width: 351px;
+    background-color:  #b3cde0;
+}
+
+div.b{
+    display: flex;
+    justify-content: center;
+    width: 357px;
+}
+
+button.SignupButton{
+    height: 30px;
+    width: 206px;
+    font-family: Josefin Sans;
+    font-size: 20px;
+    background-color: #005b96;
+    color: white;
+    border: none;
+}
+
+form>span{
+    padding:10px;
+    text-align: center;
+}
+

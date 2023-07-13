@@ -1,0 +1,175 @@
+div.LandingHeader{
+   background-color:white;
+   display: grid;
+   grid-template-columns: 30fr 70fr;
+   justify-content: space-evenly;
+   padding : 20px 50px;
+
+}
+div.LandingHeader>div.logo{
+    background-image: url('images/landing page images/logo.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 120px;
+}
+div.LandingHeader>div.menu{
+    display:flex;
+    justify-content:flex-end;
+    color: black;
+    font-family: Josefin Sans;
+    align-items: center;
+}
+
+div.menu>span[id="Sign"]{
+    border-style: solid;
+    border-color:black;
+    padding: 10px;
+    box-sizing: padding-box;
+}
+div.menu>span[id='Login']{
+    padding-right: 20px;
+}
+
+div.des{
+    height: 400px;
+    background-image:url('images/landing page images/water.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 130%;
+    align-content: center;
+    margin: 0px 50px 40px 50px;
+}
+
+div.des>p{
+    text-align: center;
+    font-family: Josefin Sans;
+    font-size: 25px;
+    color: deepskyblue;
+}
+
+div.des>p#line1{
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+div.about{
+    display: grid;
+    grid-template-rows:auto;
+    margin : 0px 50px;
+}
+
+div.about>span{
+    padding : 10px 50px;
+    font-family: Josefin Sans;
+    font-size: 50px;
+    text-align: center;
+}
+
+div.about>h1{
+    font-family: Josefin Sans;
+    font-size: 25px;
+    text-align: center;
+    font-weight: lighter;
+    margin: 20px;
+}
+
+div.cols{
+    box-sizing: border-box;
+    display: grid;
+    height: 300px;
+    margin: 0px 50px;
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    column-gap: 7px;
+    font-family: Verdana;
+}
+
+#S1,#S2,#S3,#S4,#S5{
+    display: grid;
+    grid-template-rows: 8fr 2fr;
+}
+
+div.cols>div>span{
+    text-align: center;
+    font-weight: bold;
+}
+
+#a{
+    background-image:url('images/landing page images/purifier.jpg');
+    background-size: 100% 100%;
+    border: solid black;
+}
+
+#b{
+    background-image:url('images/landing page images/installation.jpg');
+    background-size: 100% 100%;
+    border: solid black;
+}
+#c{
+    background-image:url('images/landing page images/repair.jpg');
+    background-size: 100% 100%;
+    border: solid black;
+    
+}
+#d{
+    background-image:url('images/landing page images/maintain.jpg');
+    background-size: 100% 100%;
+    border: solid black;
+    
+}
+#e{
+    background-image:url('images/landing page images/amc.jpg');
+    background-size: 100% 100%;
+    border: solid black;
+    
+}
+
+div.aboutus{
+    background-size : 100% 100%;
+    background-repeat: no-repeat;
+    font-family: Josefin Sans;
+    height: fit-content;
+    overflow-y: scroll;
+    margin:20px 50px;
+    background-color: rgba(255, 255, 255, 0.972);
+    
+    
+}
+
+div.aboutus>h1{
+    text-align: center;
+    font-size: 50px;
+    padding-top: 20px;
+}
+
+div.aboutus>p{
+    padding : 0px 20px;
+    font-size: 30px;
+    text-align: justify;
+    padding : 0px 30px;
+    font-weight:normal;
+}
+
+div.contact{
+    margin:50px;
+    margin-top: 0px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: Josefin Sans;
+}
+
+div.contact>h1{
+    font-size: 50px;
+    text-align: center;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+}
+
+#y,#z{
+    height: fit-content;
+    width: fit-content;
+}

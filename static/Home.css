@@ -1,0 +1,72 @@
+/* #011f4b #03396c #005b96 #6497b1 #b3cde0 */
+.Navbar{
+    display: flex;
+    margin: 20px 50px;
+    background-color:  #005b96;
+    justify-content: space-between;
+}
+div.Navbar>div.lo{
+    background-image: url('images/landing page images/logo.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.welcome{
+    margin: 50px;
+    font-family: Josefin Sans;
+}
+
+.form{
+    display: flex;
+    align-content: center;
+    margin : 0px 50px;
+    justify-content: center;
+}
+.form>form{ 
+    background-color:#b3cde0 ;
+    padding : 20px;
+}
+
+.form>form,button[type='submit']{
+    font-family: Josefin Sans;
+    display: flex;
+    flex-direction: column;
+}
+
+form div{
+    height: 50px;
+    font-size: 20px;
+}
+
+select#rouv{
+    height: 50px;
+}
+
+button[class='book']{
+    height: 30px;
+    width: 206px;
+    background-color: #005b96;
+    color: white;
+    border: none;
+    font-family: Josefin Sans;
+    font-size: 20px;
+}
+
+
+/* flash message */
+div.flash{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-family: Josefin Sans;
+   color: black;
+   font-size: 20px;
+   margin:20px 50px;
+   height: 30px;
+}
+
+div.flash > span{
+    background-color:  #A2FF86;
+    text-align: center;
+    padding: 20px;
+}
