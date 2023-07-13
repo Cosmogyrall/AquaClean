@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type='text/css' href='{{url_for('static', filename='Home.css')}}'>
+        <style type="text/css">
+            body{
+               background-color: #255 255 255;
+            }
+        </style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin Sans">
+    </head>
+
+    <body>
+        <!--navbar-->
+        <div class='Navbar'>
+            <div class='lo'></div>
+            <div class='menu'>
+              <a href='{{url_for('logout')}}'><img src="/static/images/homepage images/logout.png" alt="logout"></a>
+            </div>
+        </div>
+
+        <!--Welcome-->
+        <div class='welcome'>
+            <h1>>>Welcome {{data.fname}}</h1>
+        </div>
+        
+        <div class='form'>
+            <form action='/new_issue' method="POST">
+             <!--booking section-->
+                <div class='issue'>
+                   <!--problem dropbox-->
+                    <label for="problem">Select a Problem : </label>
+                    <select name='problem'>
+                      <option value="Unusual Water Taste Or Smell From The Water Purifier">Unusual Water Taste Or Smell From The Water Purifier</option>
+                      <option value="Slow Water Flow From The Water Purifier">Slow Water Flow From The Water Purifier</option>
+                      <option value="No water flow">No water flow</option>
+                      <option value="Water Is Leaking From The Purifier’s Faucet Or Filter/Membrane">Water Is Leaking From The Purifier’s Faucet Or Filter/Membrane</option>
+                      <option value="RO Water Tank Does Not Fill Up">RO Water Tank Does Not Fill Up</option>
+                      <option value="Machine malfunctioning">Machine malfunctioning</option>
+                      <option value="Constant drain flow">Constant drain Flow</option>
+                      <option value="Low water pressure">Low water pressure</option>
+                    </select>
+                </div>
+                    
+                <!--ro/uv-->
+                <div class='type'>
+                   <label for="RO/UV">Choose machine type : </label>
+                   <select name="RO/UV" id="rouv">
+                    <option value="RO">RO</option>
+                    <option value="UV">UV</option>
+                   </select>
+                </div>
+
+                <!--book date-->
+                <div>
+                    <label for='date'>Book appointment date : </label>
+                    <input type="date" name='date'></input>
+                </div>
+
+                 <!--book time-->
+                 <div>
+                    <label for='time'>Book appointment time : </label>
+                    <input type="time" name='time' min="7:00" max="19:00"></input>
+                </div>
+
+                <button type="submit" class='book'>Book appointment </button>
+        
+            </form>
+       </div>
+
+        <!--flash message for confirmation-->
+        {% for msg in flash_msg %}
+        {% if msg %}
+         <div class='flash'><span>{{msg}}</span></div>
+        {% endif %}
+        {% endfor %}
+        
+    </body>
+</html>
