@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>SignUp Page</title>
+        <link rel='stylesheet' href='{{url_for('static', filename='SignupPage.css')}}'>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin Sans">
+    </head>
+    <body>
+        <div class='sign_header'>
+            <a href='{{url_for('landingPage')}}'><img src='/static/images/login images/back.jpg' alt="back"></a>
+        </div>
+        <!--SignUP box-->
+        <div class='Sbox'>
+            <form action="/new_signup" method="Post" >
+
+            <!--first name box-->
+            <div class='inp1'>
+                <label for='fname'><b>First Name</b></label><br>
+                <input type='text' name='fname' required>
+            </div>
+
+            <!--last name box-->
+            <div class='inp2'>
+                <label for='lname'><b>Last Name</b></label><br>
+                <input type='text' name='lname' required>
+            </div>
+                
+            <!--phone number box-->
+            <div class='inp3'>
+               <label for='Phone'><b>Phone Number</b></label><br>
+               <input type='text' name='Phone' size='10' required>
+            </div>
+
+            <!--email box-->
+            <div class='inp4'>
+                <label for='email'><b>Email</b></label><br>
+                <input type='email' name='email'>
+            </div>
+
+            <!--address box-->
+            <div class='inp5'>
+                <label for='address'><b>Address</b></label><br>
+                <input type='text' name='address' required>
+            </div>
+
+            <!--password box-->
+            <div class='inp6'>
+              <label for='password'><b>password</b></label><br>
+              <input type='password' name='password' required>
+            </div>
+
+            <!--Signup button-->
+            <div class='b'>
+              <button type='submit' class='SignupButton'>SignUp</button>
+            </div>
+            <span>Already have an account?<a href='{{url_for('Login')}}'>Login</a></span>
+            </form>
+        </div>
+
+
+
+    </body>
+</html>
