@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Issue Records</title>
+        <style>
+            table {
+              border-collapse: collapse;
+              width: 100%;
+            }
+          
+            th, td {
+              border: 1px solid #dddddd;
+              padding: 8px;
+              text-align: left;
+            }
+          
+            th {
+              background-color: #f2f2f2;
+            }
+          </style>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>IID</th>
+                    <th>UID</th>
+                    <th>RO_type</th>
+                    <th>problem</th>
+                    <th>bdate</th>
+                    <th>btime</th>
+                    <th>status</th>
+                    <th>created at</th>
+                    <th>charges</th>
+                    <th>review</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in records%}
+                <tr style={'border:10px;'}>
+                    <td>{{record.IID}}</td>
+                    <td>{{record.UID}}</td>
+                    <td>{{record.RO_type}}</td>
+                    <td>{{record.problem}}</td>
+                    <td>{{record.bdate}}</td>
+                    <td>{{record.btime}}</td>
+                    <td>{{record.status}}</td>
+                    <td>{{record.created_at}}</td>
+                    <td>{{record.charges}}</td>
+                    <td>{{record.Review}}</td>
+                </tr>
+                {% endfor%}
+            </tbody>
+        </table>
+
+        <button name='clearDB'><a href ='{{url_for('delete_issue_records')}}'>Clear Database</a></button>
+
+    </body>
+</html>
