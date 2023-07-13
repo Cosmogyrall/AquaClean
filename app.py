@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request,redirect,url_for,session,flash,get_flashed_messages
+from flask import Flask, render_template, request,redirect,url_for,session,flash,get_flashed_messages,make_response
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 import os
@@ -6,7 +6,6 @@ from sqlalchemy import func
 from datetime import datetime,date,time
 import pytz
 from flask_mail import Mail,Message
-from flask_sitemap import Sitemap
 
 
 # creating the Flask instance ( a WSGI application ) called app
@@ -35,9 +34,6 @@ app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
 mail = Mail(app)
-
-# Create an instance of the Sitemap class and pass your Flask app as an argument:
-sitemap = Sitemap(app)
 
 
 ##########################################################################
@@ -95,14 +91,10 @@ with app.app_context():
 # Typically, this route is mapped to /sitemap.xml.
 @app.route('/sitemap.xml')
 def sitemap():
-    return sitemap.sitemap()
-
-with app.app_context():
-    sitemap.add(url='/', lastmod=datetime.now(), changefreq='daily', priority=1.0)
-    # Add more URLs as needed
-
-with app.app_context():
-    sitemap.generate()
+   sitemap_xml = render_template(url_for('sitemap'))
+   response = make_response(sitemap_xml)
+   response.headers['Content-Type']="application/xml"
+   return response
 
 
 ################################
