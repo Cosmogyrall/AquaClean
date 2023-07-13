@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Login Page</title>
+        <link rel='stylesheet' href='{{url_for('static', filename='LoginPage.css')}}'>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin Sans">
+    </head>
+
+    <body>
+        <!--go back to landingpage-->
+        <div class='mainpage'>
+        <a href='{{url_for('landingPage')}}'><img src='/static/images/login images/back.jpg' alt="back"></a>
+        </div>
+
+        <!--Login box-->
+        <div class='lbox'>
+            <form action="/Validatelogin" method="POST" >
+                
+            <!--phone number box-->
+            <div class='inp1'>
+               <label for='Phone'><b>Phone Number</b></label><br>
+               <input type='text' name='Phone' size='10' required>
+            </div>
+
+            <!--password box-->
+            <div class='inp2'>
+              <label for='password'><b>Password</b></label><br>
+              <input type='password' name='password' required>
+            </div>
+
+            <!--login button-->
+    
+            <button type='submit' class='loginButton'>Login</button>
+            <!--new ? -->
+            <br>
+            <span>New to AquaClean ? <a href='{{url_for('signup')}}'>Sign Up</a></span>
+            <span>Bad memory ? <a href='{{url_for('resetPassword')}}'>Forgot Password</a></span>
+            </form>
+        </div>
+
+        <!--get the invalid credentials flash message-->
+        {% with message = get_flashed_messages()  %}
+        {% if message %}
+        <span>{{message}}</span>
+        {% endif %}
+        {% endwith %}
+
+
+    </body>
+</html>
