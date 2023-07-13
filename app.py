@@ -6,6 +6,8 @@ from sqlalchemy import func
 from datetime import datetime,date,time
 import pytz
 from flask_mail import Mail,Message
+from flask_sitemap import Sitemap
+
 
 # creating the Flask instance ( a WSGI application ) called app
 app = Flask(__name__)
@@ -33,6 +35,10 @@ app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
 mail = Mail(app)
+
+# Create an instance of the Sitemap class and pass your Flask app as an argument:
+sitemap = Sitemap(app)
+
 
 ##########################################################################
 ###################           MODELS          ############################
@@ -84,6 +90,22 @@ with app.app_context():
 ##########################################################################
 ###################          URL ROUTES          #########################
 ##########################################################################
+
+# Create a route in your Flask app that will serve the sitemap XML.
+# Typically, this route is mapped to /sitemap.xml.
+@app.route('/sitemap.xml')
+def sitemap():
+    return sitemap.sitemap()
+
+with app.app_context():
+    sitemap.add(url='/', lastmod=datetime.now(), changefreq='daily', priority=1.0)
+    # Add more URLs as needed
+
+with app.app_context():
+    sitemap.generate()
+
+
+################################
 
 # Starting with the URL to view function routing 
 @app.route('/')
