@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Records</title>
+        <style>
+            table {
+              border-collapse: collapse;
+              width: 100%;
+            }
+          
+            th, td {
+              border: 1px solid #dddddd;
+              padding: 8px;
+              text-align: left;
+            }
+          
+            th {
+              background-color: #f2f2f2;
+            }
+          </style>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>UID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Phone Number</th>
+                    <th>email</th>
+                    <th>Address</th>
+                    <th>password</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in records%}
+                <tr style={'border: 10px;'}>
+                    <td>{{record.UID}}</td>
+                    <td>{{record.fname}}</td>
+                    <td>{{record.lname}}</td>
+                    <td>{{record.Phone}}</td>
+                    <td>{{record.email}}</td>
+                    <td>{{record.Address}}</td>
+                    <td>{{record.password}}</td>
+                </tr>
+                {% endfor%}
+            </tbody>
+        </table>
+
+        <button type="button" name='clearDB'><a href={{url_for('delete_user_records')}}>Clear database</a></button>
+    </body>
+</html>
