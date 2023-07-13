@@ -92,8 +92,8 @@ def landingPage():
 
 ###############################
 
-@app.route('/Login')
-def Login(method=['POST','GET']):
+@app.route('/Login',methods=['POST','GET'])
+def Login():
     return render_template('login.html')
 
 ###############################
@@ -154,7 +154,8 @@ def validateLogin():
         # if not valid flash the msgs and redirect to login page again
         else:
          flash( "Invalid credentials. Please try again.")
-         return redirect(url_for('Login'))
+         inv_cred = get_flashed_messages()
+         return render_template('login.html', inv = inv_cred)
         
 ###############################
 # forgot password
@@ -168,8 +169,8 @@ def resetPassword():
 def logout():
    session.pop('user_id')
    flash("logged out successfully!")
-   logout_msg = get_flashed_messages()
-   return render_template('login.html',logout_msg=logout_msg)
+   log = get_flashed_messages()
+   return render_template('login.html',logout_msg=log)
 
 ###############################   
 # page to view the records in the user database

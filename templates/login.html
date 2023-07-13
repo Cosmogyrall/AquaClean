@@ -39,17 +39,17 @@
         </div>
 
         <!--get the invalid credentials flash message-->
-        {% with message = get_flashed_messages()  %}
-        {% if message %}
-        <span>{{message}}</span>
-        {% endif %}
-        {% endwith %}
+        {% for message in inv  %}
+         {% if message %}
+            <div class='inv'><span>{{message}}</span></div>
+          {% endif %}
+        {% endfor %} 
 
         <!--get the logged out msg-->
         {% for msg in logout_msg  %}
-        {% if msg %}
-        <div class='flash'><span>{{msg}}</span></div>
-        {% endif %}
+           {% if msg %}
+             <div class='lmsg'><span>{{msg}}</span></div>
+           {% endif %}
         {% endfor %}
 
 

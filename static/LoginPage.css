@@ -51,7 +51,7 @@ div.lbox span{
 }
 
 /* flash message */
-div.lmsg{
+div.lmsg, div.inv{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,6 +61,10 @@ div.lmsg{
     margin:20px 50px;
     height: 30px;
  }
-
+ div.lmsg > span, div.inv>span{
+    background-color:  #A2FF86;
+    text-align: center;
+    padding: 20px;
+}
  
 
