@@ -88,7 +88,7 @@ with app.app_context():
 # Starting with the URL to view function routing 
 @app.route('/')
 def landingPage():
-    return render_template('landingPage.html')
+    return render_template('index.html')
 
 ###############################
 
