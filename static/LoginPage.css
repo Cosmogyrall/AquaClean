@@ -50,5 +50,17 @@ div.lbox span{
     font-size: 15px;
 }
 
+/* flash message */
+div.lmsg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Josefin Sans;
+    color: black;
+    font-size: 20px;
+    margin:20px 50px;
+    height: 30px;
+ }
+
  
 

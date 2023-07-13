@@ -45,6 +45,13 @@
         {% endif %}
         {% endwith %}
 
+        <!--get the logged out msg-->
+        {% for msg in logout_msg  %}
+        {% if msg %}
+        <div class='flash'><span>{{msg}}</span></div>
+        {% endif %}
+        {% endfor %}
+
 
     </body>
 </html>
