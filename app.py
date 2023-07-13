@@ -168,7 +168,8 @@ def resetPassword():
 def logout():
    session.pop('user_id')
    flash("logged out successfully!")
-   return redirect(url_for('Login'))
+   logout_msg = get_flashed_messages()
+   return render_template('login.html',logout_msg=logout_msg)
 
 ###############################   
 # page to view the records in the user database
