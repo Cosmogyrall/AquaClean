@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <title>AquaClean</title>
+    <style type="text/css">
+        body{
+           background-color: #255 255 255;
+        }
+    </style>
+    <link rel="stylesheet" type='text/css' href="{{url_for('static', filename ='landingPage.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin Sans">
+    </head>
+    <body>
+        <!--header section-->
+        <div class='LandingHeader'>
+            <div class='logo'></div>
+            <div class='menu'>
+             <span id='Login'><a href='{{url_for('Login')}}'>Login</a></span>
+             <span id='Sign'><a href='{{url_for('signup')}}'>Sign Up</a></span>
+            </div>
+        </div>
+    
+        <!--Description section-->
+        <div class="des">
+                <p id='line1'>Water purification at it's finest.</p>
+                <p id='line2'>Say goodbye to contaminants, embrace pure water.</p>
+            </div>
+        </div>
+
+        <!--Get services-->
+        <div class='about'>
+            <span>Get instant RO & UV repair services at your doorstep </span>
+            <h1> Our Services are available for all types of water purifiers </h1>
+        </div>
+
+        <!--service blocks-->
+        <div class='cols'>
+            <div id='S1'><div id='a'></div><span>RO supply</span></div>
+            <div id='S2'><div id='b'></div><span>RO installation</span></div>
+            <div id='S3'><div id='c'></div><span>RO repair</span></div>
+            <div id='S4'><div id='d'></div><span>RO Maintainance</span></div>
+            <div id='S5'><div id='e'></div><span>RO Annual Contracts</span></div>
+        </div>
+
+        <!--About us-->
+        <div class='aboutus'>
+            <h1>Our Mission</h1>
+            <p>At AquaClean, we are dedicated to ensuring that your water purifier operates at its best, providing you with clean and safe drinking water. 
+                We understand the importance of a well-functioning water purifier in maintaining the health and well-being of you and your family. That's why
+                we offer reliable and professional repair services for a wide range of water purifier brands and models.With years of experience in the industry,
+                our team of skilled technicians specializes in diagnosing and repairing water purifiers with precision and expertise. We are committed to delivering 
+                top-quality service and ensuring your complete satisfaction. Our goal is to extend the lifespan of your water purifier, saving you money on costly 
+                replacements and ensuring the continuous supply of purified water.
+            </p>
+        </div>
+
+        <!--Contact-->
+        <div class='contact'>
+            <h1>Get in touch</h1>
+            <div class='info'>
+                <div id='y'><a href="mailto:aquaclean61@gmail.com"><img src="/static/images/contact us logos/gmail.png" alt="gmail"></a></div>
+                <div id='z'><a href='tel:7020013809'><img src="/static/images/contact us logos/call.png" alt="call"></a></div>
+            </div>
+        </div>
+    
+    </body>
+</html>
