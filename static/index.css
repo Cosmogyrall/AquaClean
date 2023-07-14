@@ -200,8 +200,8 @@ div.contact>h1{
         border: #3246f4 solid 2px;
     }
 
-    #line1{
-        font-size: 10px;
+    div.des>p#line1{
+        font-size: 30px;
     }
     
     div.about>span{
