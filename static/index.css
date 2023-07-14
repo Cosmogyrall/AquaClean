@@ -1,3 +1,4 @@
+/* #011f4b #03396c #005b96 #6497b1 #b3cde0 */
 div.LandingHeader{
    background-color:white;
    display: grid;
@@ -37,6 +38,7 @@ div.des{
     background-size: 100% 130%;
     align-content: center;
     margin: 0px 50px 40px 50px;
+    border: #b3cde0 solid 20px;
 }
 
 div.des>p{
