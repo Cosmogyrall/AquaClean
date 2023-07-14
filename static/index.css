@@ -38,7 +38,7 @@ div.des{
     background-size: 100% 130%;
     align-content: center;
     margin: 0px 50px 40px 50px;
-    border: #b3cde0 solid 20px;
+    border: #3246f4 solid 2px;
 }
 
 div.des>p{
@@ -174,4 +174,62 @@ div.contact>h1{
 #y,#z{
     height: fit-content;
     width: fit-content;
+}
+
+
+@media screen and (min-width:300px) and (max-width:767px){
+    div.cols{
+        box-sizing: border-box;
+        display: grid;
+        height: 600px;
+        width: 100px;
+        margin : 50px 30px 50px 70px;
+        grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+        column-gap: 7px;
+        font-family: Verdana;
+        align-items: center;
+    }
+
+    div.des{
+        height: 400px;
+       background: linear-gradient(to top,blue, rgb(118, 214, 243));
+        background-repeat: no-repeat;
+        background-size: 100% 130%;
+        align-content: center;
+        margin: 0px 50px 40px 50px;
+        border: #3246f4 solid 2px;
+    }
+
+    #line1{
+        font-size: 10px;
+    }
+    
+    div.about>span{
+    padding : 10px 10px;
+    font-family: Josefin Sans;
+    font-size: 30px;
+    text-align: center;
+    }
+
+    div.about>h1{
+    font-family: Josefin Sans;
+    font-size: 20px;
+    text-align: center;
+    font-weight: lighter;
+    margin: 20px;
+    }
+
+    div.aboutus>h1{
+        text-align: center;
+        font-size: 40px;
+        padding-top: 20px;
+    }
+    
+    div.aboutus>p{
+        padding : 0px 20px;
+        font-size: 20px;
+        text-align: justify;
+        padding : 0px 30px;
+        font-weight:normal;
+    }
 }
