@@ -168,7 +168,8 @@ div.contact>h1{
 
 .info{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+
 }
 
 #y,#z{
