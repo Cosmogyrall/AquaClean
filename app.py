@@ -25,11 +25,12 @@ migrate = Migrate(app,db)
 
 
 # mail configurations
-'''SMTP configurations : https://youtu.be/IWxwWFTlTUQ'''
+'''SMTP configurations : https://youtu.be/IWxwWFTlTUQ
+https://support.google.com/accounts/answer/185833?hl=en'''
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = 'aquaclean61@gmail.com'
-app.config['MAIL_PASSWORD'] = 'xpfbrolhvicbbfgl'
+app.config['MAIL_PASSWORD'] = 'kyzfodoucgccevqs'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
@@ -141,7 +142,7 @@ def home():
    UID = session.get("user_id")
 
    # get the user of that UID and send it to home.html
-   user = User.query.get(UID)
+   user = User.query.filter_by(UID=UID).first()
    return render_template('Home.html',data=user)
 
 #############################
